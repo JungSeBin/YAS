@@ -1,6 +1,7 @@
 #include "PlayScene.h"
 #include "Player.h"
 #include "Character.h"
+#include "Humans.h"
 
 USING_NS_CC;
 
@@ -22,6 +23,8 @@ bool PlayScene::init()
         return false;
     }
 
+    prevLeft = true;
+
     auto keyListener = EventListenerKeyboard::create();
     keyListener->onKeyPressed = CC_CALLBACK_2(PlayScene::onKeyPressed, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(keyListener, this);
@@ -37,23 +40,37 @@ bool PlayScene::init()
     auto characSprite = character->GetSprite();
     characSprite->setAnchorPoint(Point(0.5, 0));
     characSprite->setPosition(winSize.width / 2, winSize.height / 8);
-    characSprite->setScale(2.0f);
+    characSprite->setScale(3.0f);
     this->addChild(characSprite);
 
-    this->schedule(schedule_selector(PlayScene::Tick), 0.2f);
     return true;
 }
 
 void PlayScene::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, Event* event)
 {
-    if (keyCode == cocos2d::EventKeyboard::KeyCode ::KEY_SPACE)
-    {
-        Player::getInstance()->GetCharacter()->Turn();
-        Player::getInstance()->GetCharacter()->GetSprite()->stopAllActions();
-    }
-}
+    auto character = Player::getInstance()->GetCharacter();
 
-void PlayScene::Tick(float dt)
-{
-    Player::getInstance()->GetCharacter()->Move();
+    if (keyCode == cocos2d::EventKeyboard::KeyCode ::KEY_RIGHT_ARROW)
+    {
+        isLeft = false;
+    }
+    else if (keyCode == cocos2d::EventKeyboard::KeyCode::KEY_LEFT_ARROW)
+    {
+        isLeft = true;
+    }
+    else if (keyCode == cocos2d::EventKeyboard::KeyCode::KEY_SPACE)
+    {
+        character->GetSprite()->stopAllActions();
+        character->GetHuman()->Action(isLeft);
+        return;
+    }
+    if (prevLeft != isLeft)
+    {
+        character->GetSprite()->stopAllActions();
+        if (prevLeft)
+            prevLeft = false;
+        else
+            prevLeft = true;
+    }
+    character->Move(isLeft);
 }

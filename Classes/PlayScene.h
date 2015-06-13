@@ -15,6 +15,9 @@ public:
     void Tick(float dt);
 
     CREATE_FUNC(PlayScene);
+
+    bool prevLeft;
+    bool isLeft;
 };
 
 #endif

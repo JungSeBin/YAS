@@ -61,6 +61,12 @@
     <ClCompile Include="..\Classes\Player.cpp">
       <Filter>Player</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\MuscleMan.cpp">
+      <Filter>Equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PoorWoman.cpp">
+      <Filter>Equipment</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
@@ -90,6 +96,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Player.h">
       <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PoorWoman.h">
+      <Filter>Equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MuscleMan.h">
+      <Filter>Equipment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

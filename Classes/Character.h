@@ -4,6 +4,7 @@
 
 USING_NS_CC;
 
+class Humans;
 class Character
 {
 public:
@@ -11,9 +12,11 @@ public:
     ~Character();
 
     void            Init();
-    void            Move();
+    void            Move(bool isLeft);
 
     Sprite*         GetSprite(){ return m_CurSprite; }
+    Humans*         GetHuman(){ return m_Human; }
+    bool            IsLeft(){ return m_IsLeft; }
     void            Turn();
 
     RepeatForever*  MakeAnimation(const char* format, int size, float delay);
@@ -22,6 +25,6 @@ public:
 private:
     bool m_IsLeft;
     Sprite* m_CurSprite;
-    Sprite* m_PrevSprite;
+    Humans* m_Human;
 };
 

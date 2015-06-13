@@ -1,5 +1,5 @@
 #pragma once
-#include "C:\Users\PC\Desktop\Visual Studio Project\YAS\Classes\Humans.h"
+#include "Humans.h"
 class MuscleMan :
     public Humans
 {
