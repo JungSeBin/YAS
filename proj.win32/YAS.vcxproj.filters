@@ -16,6 +16,18 @@
     <Filter Include="Play">
       <UniqueIdentifier>{b431f5fc-fe49-49e6-92e2-93b07ff420bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{d4a87d37-e722-4c41-bcc3-366080470915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Equipment">
+      <UniqueIdentifier>{cd08cfd4-6121-43e1-ae26-953e2396edb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Monster">
+      <UniqueIdentifier>{439ecf4e-9aa0-4ddb-8937-d1f411935cd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Character">
+      <UniqueIdentifier>{21ad2836-3f91-48e0-8250-238a290b976d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
@@ -28,6 +40,21 @@
     <ClCompile Include="..\Classes\ShopScene.cpp">
       <Filter>Shop</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\MainScene.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayScene.cpp">
+      <Filter>Play</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PoorHuman.cpp">
+      <Filter>Equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Humans.cpp">
+      <Filter>Equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Character.cpp">
+      <Filter>Object\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
@@ -39,6 +66,21 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ShopScene.h">
       <Filter>Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainScene.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayScene.h">
+      <Filter>Play</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Humans.h">
+      <Filter>Equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PoorHuman.h">
+      <Filter>Equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Character.h">
+      <Filter>Object\Character</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

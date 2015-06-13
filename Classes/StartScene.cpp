@@ -1,4 +1,6 @@
 #include "StartScene.h"
+#include "MainScene.h"
+#include "ShopScene.h"
 
 USING_NS_CC;
 
@@ -20,5 +22,32 @@ bool StartScene::init()
         return false;
     }
 
+    auto winSize = Director::getInstance()->getWinSize();
+
+    auto startButton = MenuItemImage::create(
+        "Start.png",
+        "Start.png",
+        CC_CALLBACK_1(StartScene::menuCallback0, this));
+
+    auto exitButton = MenuItemImage::create(
+        "Exit.png",
+        "Exit.png",
+        CC_CALLBACK_1(StartScene::menuCallback1, this));
+
+    auto menu = Menu::create(startButton, exitButton, false);
+    menu->alignItemsVerticallyWithPadding(50);
+    menu->setPosition(winSize.width / 2, winSize.height / 2);
+
+    this->addChild(menu);
     return true;
+}
+
+void StartScene::menuCallback0(cocos2d::Ref* sender)
+{
+    Director::getInstance()->replaceScene(MainScene::createScene());
+}
+
+void StartScene::menuCallback1(cocos2d::Ref* sender)
+{
+    exit(1);
 }
