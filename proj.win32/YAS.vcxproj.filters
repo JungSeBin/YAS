@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shop">
+      <UniqueIdentifier>{15b37676-d573-4783-89f0-76fb97091036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{318b95f4-9395-499b-a822-e4baa3135040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Play">
+      <UniqueIdentifier>{b431f5fc-fe49-49e6-92e2-93b07ff420bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\StartScene.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ShopScene.cpp">
+      <Filter>Shop</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\StartScene.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ShopScene.h">
+      <Filter>Shop</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
