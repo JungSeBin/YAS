@@ -1,6 +1,8 @@
 #include "StartScene.h"
 #include "MainScene.h"
 #include "ShopScene.h"
+#include "Player.h"
+#include "Character.h"
 
 USING_NS_CC;
 
@@ -44,6 +46,7 @@ bool StartScene::init()
 
 void StartScene::menuCallback0(cocos2d::Ref* sender)
 {
+    //Player::getInstance()->GetCharacter()->Init();
     Director::getInstance()->replaceScene(MainScene::createScene());
 }
 

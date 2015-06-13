@@ -1,9 +1,11 @@
 #include "Character.h"
 
+USING_NS_CC;
 
 Character::Character()
 :m_Sprite(nullptr)
 {
+    Init();
 }
 
 

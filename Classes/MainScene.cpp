@@ -37,8 +37,8 @@ bool MainScene::init()
         CC_CALLBACK_1(MainScene::menuCallback2, this));
 
     auto menu = Menu::create(playButton, equipButton, shopButton, false);
-    menu->alignItemsVerticallyWithPadding(30);
-    menu->setPosition(700, 300);
+    menu->alignItemsVerticallyWithPadding(100);
+    menu->setPosition(1000, 400);
     this->addChild(menu);
 
     return true;

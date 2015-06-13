@@ -28,6 +28,9 @@
     <Filter Include="Object\Character">
       <UniqueIdentifier>{21ad2836-3f91-48e0-8250-238a290b976d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{4f5d13c7-8c4c-45d9-9ae1-89a8b750f8bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
@@ -55,6 +58,9 @@
     <ClCompile Include="..\Classes\Character.cpp">
       <Filter>Object\Character</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
@@ -81,6 +87,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Character.h">
       <Filter>Object\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player.h">
+      <Filter>Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
